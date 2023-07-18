@@ -22,10 +22,10 @@ public class Main {
         double[] x = fillX(start, end, step);
         double[] y = fillY(x);
 
-        printMinElement(getMinElement(x), minElement(x),"x");
-        printMaxElement(getMaxElement(x), maxElement(x),"x");
-        printMinElement(getMinElement(y), minElement(y),"y");
-        printMaxElement(getMaxElement(y), maxElement(y),"y");
+        printMinElement(getMinElement(x), getMinIndexElement(x),"x");
+        printMaxElement(getMaxElement(x), getMaxIndexElement(x),"x");
+        printMinElement(getMinElement(y), getMinIndexElement(y),"y");
+        printMaxElement(getMaxElement(y), getMaxIndexElement(y),"y");
 
         double sumX = sum(x);
         printSum(sumX, "x");
@@ -62,7 +62,7 @@ public class Main {
         return DoubleStream.of(x).map(this::function).toArray();
     }
 
-    public static int maxElement(double[] x) {
+    public static int getMaxIndexElement(double[] x) {
         double element = getMaxElement(x);
         int count = -1;
         for (double i : x) {
@@ -72,7 +72,7 @@ public class Main {
         return 0;
     }
 
-    public static int minElement(double[] x) {
+    public static int getMinIndexElement(double[] x) {
         double element = getMinElement(x);
         int count = -1;
         for (double i : x) {

@@ -55,7 +55,7 @@ public class MainTest {
         double end = 2.8;
         double step = 0.002;
         double[] x = main.fillX(start, end, step);
-        int indexMaxElement = main.maxElement(x);
+        int indexMaxElement = main.getMaxIndexElement(x);
         assertThat(indexMaxElement).isEqualTo(expected);
     }
 
@@ -66,7 +66,7 @@ public class MainTest {
         double step = 0.002;
         double[] x = main.fillX(start, end, step);
         double[] y = main.fillY(x);
-        int indexMaxElement = main.maxElement(y);
+        int indexMaxElement = main.getMaxIndexElement(y);
         assertThat(indexMaxElement).isEqualTo(expected);
     }
 
@@ -76,7 +76,7 @@ public class MainTest {
         double end = 2.8;
         double step = 0.002;
         double[] x = main.fillX(start, end, step);
-        int indexMinElement = main.minElement(x);
+        int indexMinElement = main.getMinIndexElement(x);
         assertThat(indexMinElement).isEqualTo(expected);
     }
 
@@ -87,7 +87,7 @@ public class MainTest {
         double step = 0.002;
         double[] x = main.fillX(start, end, step);
         double[] y = main.fillY(x);
-        int indexMaxElement = main.minElement(y);
+        int indexMaxElement = main.getMinIndexElement(y);
         assertThat(indexMaxElement).isEqualTo(expected);
     }
 
